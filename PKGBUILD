@@ -1,7 +1,7 @@
 # Maintainer: hiruocha <hiruocha at gmail dot com>
 
 pkgname=nipaplay-reload-bin
-pkgver=0.3.14
+pkgver=0.3.15
 pkgrel=1
 pkgdesc="一个现代化的跨平台视频播放器"
 arch=('x86_64')
