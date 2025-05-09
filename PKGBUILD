@@ -17,7 +17,7 @@ source=(
     "${pkgname%-bin}.desktop"
 )
 sha256sums=(
-    '0a92c54a41f4db73a7197fd590bd445fba6d53b59258a089e0d2e7fad264c96c'
+    '46efaa4500e8db9f56d2880608d4381c690d9f3ad9b6f46d12abe06dc9dcaa66'
     'de29fa53adecccf8db96197f042793324350650eae62cf2179dc51ab7b665470'
     '2967341d2eb47d06aa91243aca01bedbbda6c60e9554d0c4909e1f31a473b9b5'
 )
