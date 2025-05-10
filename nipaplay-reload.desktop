@@ -7,3 +7,4 @@ Exec=nipaplay-reload
 Icon=nipaplay-reload
 Terminal=false
 Categories=AudioVideo;
+StartupWMClass=NipaPlay
