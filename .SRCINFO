@@ -1,6 +1,6 @@
 pkgbase = nipaplay-reload-bin
 	pkgdesc = 一个现代化的跨平台视频播放器
-	pkgver = 1.2.18
+	pkgver = 1.2.23
 	pkgrel = 1
 	url = https://github.com/MCDFsteve/NipaPlay-Reload
 	arch = x86_64
@@ -9,13 +9,13 @@ pkgbase = nipaplay-reload-bin
 	depends = libpulse
 	depends = alsa-lib
 	depends = mesa
-	provides = nipaplay-reload=1.2.18
+	provides = nipaplay-reload=1.2.23
 	conflicts = nipaplay-reload
 	options = !debug
-	source = nipaplay-reload-1.2.18-x86_64.tar.gz::https://github.com/MCDFsteve/NipaPlay-Reload/releases/download/v1.2.18/NipaPlay-1.2.18-Linux-amd64.tar.gz
+	source = nipaplay-reload-1.2.23-x86_64.tar.gz::https://github.com/MCDFsteve/NipaPlay-Reload/releases/download/v1.2.23/NipaPlay-1.2.23-Linux-amd64.tar.gz
 	source = nipaplay-reload.png::https://github.com/MCDFsteve/NipaPlay-Reload/raw/main/icon_windows2linux.png
 	source = nipaplay-reload.desktop
-	sha256sums = cf6ebba764fcb6e81da1c4191eb7d341ad8ec88faabce19d6a64ac1c7fd1e2e8
+	sha256sums = b824dd7dfb6c404a5998b882b918e6c634df1bd87f06110d786f8e1bb007a3c3
 	sha256sums = de29fa53adecccf8db96197f042793324350650eae62cf2179dc51ab7b665470
 	sha256sums = c2d36d469bf147500c8ac34ecc871e7e932998023a106a942010d20aa69a4146
 
