@@ -2,12 +2,12 @@
 
 pkgname=nipaplay-reload-bin
 pkgver=1.2.30
-pkgrel=1
+pkgrel=2
 pkgdesc="一个现代化的跨平台视频播放器"
 arch=('x86_64')
 url="https://github.com/MCDFsteve/NipaPlay-Reload"
 license=('MIT')
-depends=('gtk3' 'libpulse' 'alsa-lib' 'mesa')
+depends=('gtk3' 'libpulse' 'alsa-lib' 'mesa' 'mpv')
 provides=("${pkgname%-bin}=${pkgver}")
 conflicts=("${pkgname%-bin}")
 options=('!debug')
@@ -23,14 +23,14 @@ sha256sums=(
 )
 
 package() {
-    install -Dm755 "NipaPlay" "${pkgdir}/usr/lib/${pkgname%-bin}/NipaPlay"
-    install -Dm755 "run.sh" "${pkgdir}/usr/lib/${pkgname%-bin}/run.sh"
+    install -Dm755 "NipaPlay" "${pkgdir}/opt/${pkgname%-bin}/NipaPlay"
+    install -Dm755 "run.sh" "${pkgdir}/opt/${pkgname%-bin}/run.sh"
 
-    cp -rp "lib" "${pkgdir}/usr/lib/${pkgname%-bin}/"
-    cp -rp "data" "${pkgdir}/usr/lib/${pkgname%-bin}/"
+    cp -rp "lib" "${pkgdir}/opt/${pkgname%-bin}/"
+    cp -rp "data" "${pkgdir}/opt/${pkgname%-bin}/"
 
     mkdir -p "${pkgdir}/usr/bin"
-    ln -s "/usr/lib/${pkgname%-bin}/run.sh" "${pkgdir}/usr/bin/${pkgname%-bin}"
+    ln -s "/opt/${pkgname%-bin}/run.sh" "${pkgdir}/usr/bin/${pkgname%-bin}"
 
     install -Dm644 "${srcdir}/${pkgname%-bin}.desktop" "${pkgdir}/usr/share/applications/${pkgname%-bin}.desktop"
     install -Dm644 "${srcdir}/${pkgname%-bin}.png" "${pkgdir}/usr/share/pixmaps/${pkgname%-bin}.png"
