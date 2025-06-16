@@ -1,10 +1,10 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Type=Application
-Name=NipaPlay Reload
+Name=NipaPlay
 Comment=一个现代化的跨平台视频播放器
-Exec=nipaplay-reload
-Icon=nipaplay-reload
+Exec=nipaplay
+Icon=nipaplay
 Terminal=false
 Categories=AudioVideo;
 StartupWMClass=NipaPlay

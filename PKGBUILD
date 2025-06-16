@@ -3,7 +3,7 @@
 pkgname=nipaplay-reload-bin
 _pkgname=NipaPlay
 pkgver=1.3.1
-pkgrel=3
+pkgrel=4
 pkgdesc="一个现代化的跨平台视频播放器"
 arch=('x86_64')
 url="https://github.com/MCDFsteve/NipaPlay-Reload"
@@ -20,7 +20,7 @@ source=(
 sha256sums=(
     '00bfc319a061ecfa7009014e419e2c89e36602552d6cafe5855b39590b67233f'
     'de29fa53adecccf8db96197f042793324350650eae62cf2179dc51ab7b665470'
-    'c2d36d469bf147500c8ac34ecc871e7e932998023a106a942010d20aa69a4146'
+    'eb3309ee6c481697c3db412f75aa07659e053442c5e0d762c39105592563e99b'
 )
 
 package() {
