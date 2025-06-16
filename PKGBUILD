@@ -1,20 +1,21 @@
 # Maintainer: hiruocha <hiruocha at gmail dot com>
 
 pkgname=nipaplay-reload-bin
+_pkgname=NipaPlay
 pkgver=1.3.1
-pkgrel=2
+pkgrel=3
 pkgdesc="一个现代化的跨平台视频播放器"
 arch=('x86_64')
 url="https://github.com/MCDFsteve/NipaPlay-Reload"
 license=('MIT')
 depends=('fuse3' 'desktop-file-utils')
-provides=("${pkgname%-bin}=${pkgver}")
-conflicts=("${pkgname%-bin}")
+provides=("${pkgname%-reload-bin}=${pkgver}")
+conflicts=("${pkgname%-reload-bin}")
 options=('!debug' '!strip')
 source=(
-    "${pkgname%-bin}-${pkgver}-${CARCH}.AppImage::${url}/releases/download/v${pkgver}/NipaPlay-${pkgver}-Linux-amd64.AppImage"
-    "${pkgname%-bin}.png::${url}/raw/main/icon_windows2linux.png"
-    "${pkgname%-bin}.desktop"
+    "${pkgname%-reload-bin}-${pkgver}-${CARCH}.AppImage::${url}/releases/download/v${pkgver}/${_pkgver}-${pkgver}-Linux-amd64.AppImage"
+    "${pkgname%-reload-bin}.png::${url}/raw/main/icon_windows2linux.png"
+    "${pkgname%-reload-bin}.desktop"
 )
 sha256sums=(
     '00bfc319a061ecfa7009014e419e2c89e36602552d6cafe5855b39590b67233f'
@@ -23,11 +24,11 @@ sha256sums=(
 )
 
 package() {
-    install -Dm755 "${pkgname%-bin}-${pkgver}-${CARCH}.AppImage" "${pkgdir}/opt/${pkgname%-bin}/${pkgname%-bin}"
+    install -Dm755 "${pkgname%-reload-bin}-${pkgver}-${CARCH}.AppImage" "${pkgdir}/opt/${pkgname%-reload-bin}/${pkgname%-reload-bin}"
 
     mkdir -p "${pkgdir}/usr/bin"
-    ln -s "/opt/${pkgname%-bin}/${pkgname%-bin}" "${pkgdir}/usr/bin/${pkgname%-bin}"
+    ln -s "/opt/${pkgname%-reload-bin}/${pkgname%-reload-bin}" "${pkgdir}/usr/bin/${pkgname%-reload-bin}"
 
-    install -Dm644 "${srcdir}/${pkgname%-bin}.desktop" "${pkgdir}/usr/share/applications/${pkgname%-bin}.desktop"
-    install -Dm644 "${srcdir}/${pkgname%-bin}.png" "${pkgdir}/usr/share/pixmaps/${pkgname%-bin}.png"
+    install -Dm644 "${srcdir}/${pkgname%-reload-bin}.desktop" "${pkgdir}/usr/share/applications/${pkgname%-reload-bin}.desktop"
+    install -Dm644 "${srcdir}/${pkgname%-reload-bin}.png" "${pkgdir}/usr/share/pixmaps/${pkgname%-reload-bin}.png"
 }
