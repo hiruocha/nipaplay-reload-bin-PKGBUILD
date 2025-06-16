@@ -13,7 +13,7 @@ provides=("${pkgname%-reload-bin}=${pkgver}")
 conflicts=("${pkgname%-reload-bin}")
 options=('!debug' '!strip')
 source=(
-    "${pkgname%-reload-bin}-${pkgver}-${CARCH}.AppImage::${url}/releases/download/v${pkgver}/${_pkgver}-${pkgver}-Linux-amd64.AppImage"
+    "${pkgname%-reload-bin}-${pkgver}-${CARCH}.AppImage::${url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}-Linux-amd64.AppImage"
     "${pkgname%-reload-bin}.png::${url}/raw/main/icon_windows2linux.png"
     "${pkgname%-reload-bin}.desktop"
 )
