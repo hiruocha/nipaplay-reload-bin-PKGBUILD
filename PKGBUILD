@@ -2,35 +2,31 @@
 
 pkgname=nipaplay-reload-bin
 pkgver=1.3.1
-pkgrel=1
+pkgrel=2
 pkgdesc="一个现代化的跨平台视频播放器"
 arch=('x86_64')
 url="https://github.com/MCDFsteve/NipaPlay-Reload"
 license=('MIT')
-depends=('gtk3' 'libpulse' 'alsa-lib' 'mesa' 'mpv')
+depends=('fuse3' 'desktop-file-utils')
 provides=("${pkgname%-bin}=${pkgver}")
 conflicts=("${pkgname%-bin}")
-options=('!debug')
+options=('!debug' '!strip')
 source=(
-    "${pkgname%-bin}-${pkgver}-${CARCH}.tar.gz::${url}/releases/download/v${pkgver}/NipaPlay-${pkgver}-Linux-amd64.tar.gz"
+    "${pkgname%-bin}-${pkgver}-${CARCH}.AppImage::${url}/releases/download/v${pkgver}/NipaPlay-${pkgver}-Linux-amd64.AppImage"
     "${pkgname%-bin}.png::${url}/raw/main/icon_windows2linux.png"
     "${pkgname%-bin}.desktop"
 )
 sha256sums=(
-    'd3c73d1488a5bcf163799974249809587c362634a123dc50ebcd9415fbafa9f3'
+    '00bfc319a061ecfa7009014e419e2c89e36602552d6cafe5855b39590b67233f'
     'de29fa53adecccf8db96197f042793324350650eae62cf2179dc51ab7b665470'
     'c2d36d469bf147500c8ac34ecc871e7e932998023a106a942010d20aa69a4146'
 )
 
 package() {
-    install -Dm755 "NipaPlay" "${pkgdir}/opt/${pkgname%-bin}/NipaPlay"
-    install -Dm755 "run.sh" "${pkgdir}/opt/${pkgname%-bin}/run.sh"
-
-    cp -rp "lib" "${pkgdir}/opt/${pkgname%-bin}/"
-    cp -rp "data" "${pkgdir}/opt/${pkgname%-bin}/"
+    install -Dm755 "${pkgname%-bin}-${pkgver}-${CARCH}.AppImage" "${pkgdir}/opt/${pkgname%-bin}/${pkgname%-bin}"
 
     mkdir -p "${pkgdir}/usr/bin"
-    ln -s "/opt/${pkgname%-bin}/run.sh" "${pkgdir}/usr/bin/${pkgname%-bin}"
+    ln -s "/opt/${pkgname%-bin}/${pkgname%-bin}" "${pkgdir}/usr/bin/${pkgname%-bin}"
 
     install -Dm644 "${srcdir}/${pkgname%-bin}.desktop" "${pkgdir}/usr/share/applications/${pkgname%-bin}.desktop"
     install -Dm644 "${srcdir}/${pkgname%-bin}.png" "${pkgdir}/usr/share/pixmaps/${pkgname%-bin}.png"
