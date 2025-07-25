@@ -1,20 +1,20 @@
 pkgbase = nipaplay-reload-bin
 	pkgdesc = 一个现代化的跨平台视频播放器
-	pkgver = 1.4.1
+	pkgver = 1.4.3
 	pkgrel = 1
 	url = https://github.com/MCDFsteve/NipaPlay-Reload
 	arch = x86_64
 	license = MIT
 	depends = fuse3
 	depends = desktop-file-utils
-	provides = nipaplay=1.4.1
+	provides = nipaplay=1.4.3
 	conflicts = nipaplay
 	options = !debug
 	options = !strip
-	source = nipaplay-1.4.1-x86_64.AppImage::https://github.com/MCDFsteve/NipaPlay-Reload/releases/download/v1.4.1/NipaPlay-1.4.1-Linux-amd64.AppImage
+	source = nipaplay-1.4.3-x86_64.AppImage::https://github.com/MCDFsteve/NipaPlay-Reload/releases/download/v1.4.3/NipaPlay-1.4.3-Linux-amd64.AppImage
 	source = nipaplay.png::https://github.com/MCDFsteve/NipaPlay-Reload/raw/main/icon_windows2linux.png
 	source = nipaplay.desktop
-	sha256sums = 4434675e047199fa136d61e8c2507554a1bdf3c9beddd209089d8590da0e006f
+	sha256sums = 5e5a81f1570eec479c14ca1a2caeef8c5502caa5853de06e304687f3e845a29b
 	sha256sums = de29fa53adecccf8db96197f042793324350650eae62cf2179dc51ab7b665470
 	sha256sums = eb3309ee6c481697c3db412f75aa07659e053442c5e0d762c39105592563e99b
 
