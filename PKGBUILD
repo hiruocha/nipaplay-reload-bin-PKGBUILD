@@ -2,33 +2,32 @@
 
 pkgname=nipaplay-reload-bin
 _pkgname=NipaPlay
-pkgver=1.4.29
-pkgrel=2
+_desktop_name=io.github.MCDFsteve.NipaPlay-Reload
+pkgver=1.4.31
+pkgrel=1
 pkgdesc="一个现代化的跨平台视频播放器"
 arch=('x86_64')
 url="https://github.com/MCDFsteve/NipaPlay-Reload"
 license=('MIT')
-depends=('fuse3' 'desktop-file-utils')
+depends=('mpv' 'gtk3' 'ffmpeg' 'libass' 'libkeybinder3')
 provides=("${pkgname%-reload-bin}=${pkgver}")
 conflicts=("${pkgname%-reload-bin}")
-options=('!debug' '!strip')
+options=('!debug')
 source=(
-    "${pkgname%-reload-bin}-${pkgver}-${CARCH}.AppImage::${url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}-Linux-amd64.AppImage"
-    "${pkgname%-reload-bin}.png::${url}/raw/main/icon_windows2linux.png"
-    "${pkgname%-reload-bin}.desktop"
+    "${pkgname%-reload-bin}-${pkgver}-${CARCH}.tar.gz::${url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}-Linux-amd64.tar.gz"
+    "${_desktop_name}.png::${url}/raw/main/assets/icons/flatpak/hicolor/512x512/apps/io.github.MCDFSteve.NipaPlay-Reload.png"
+    "${_desktop_name}.desktop::${url}/raw/main/assets/linux/${_desktop_name}.desktop"
 )
-sha256sums=(
-    '17bef9074820c64890bedb6c0889ac854a1fe04e0bcd9648b945f94919f58b3a'
-    'de29fa53adecccf8db96197f042793324350650eae62cf2179dc51ab7b665470'
-    'eb3309ee6c481697c3db412f75aa07659e053442c5e0d762c39105592563e99b'
-)
+sha256sums=('a518792d0ef67f64ef7baef9b580adb99905baf5232b390d30353231912c9296'
+            '77e3890478c5c687e9f4531884d34062aa8f0b7aedaf7f562a2c4d3fb776ffda'
+            'd032abed9d298e87825e842b2181a9379292acefae775e9bd2840f264eaba16f')
 
 package() {
-    install -Dm755 "${pkgname%-reload-bin}-${pkgver}-${CARCH}.AppImage" "${pkgdir}/opt/${pkgname%-reload-bin}/${pkgname%-reload-bin}"
+    install -Dm755 "NipaPlay" "${pkgdir}/opt/${pkgname%-reload-bin}/NipaPlay"
 
-    mkdir -p "${pkgdir}/usr/bin"
-    ln -s "/opt/${pkgname%-reload-bin}/${pkgname%-reload-bin}" "${pkgdir}/usr/bin/${pkgname%-reload-bin}"
+    cp -rp "lib" "${pkgdir}/opt/${pkgname%-reload-bin}/"
+    cp -rp "data" "${pkgdir}/opt/${pkgname%-reload-bin}/"
 
-    install -Dm644 "${srcdir}/${pkgname%-reload-bin}.desktop" "${pkgdir}/usr/share/applications/${pkgname%-reload-bin}.desktop"
-    install -Dm644 "${srcdir}/${pkgname%-reload-bin}.png" "${pkgdir}/usr/share/pixmaps/${pkgname%-reload-bin}.png"
+    install -Dm644 "${srcdir}/${_desktop_name}.desktop" "${pkgdir}/usr/share/applications/${_desktop_name}.desktop"
+    install -Dm644 "${srcdir}/${_desktop_name}.png" "${pkgdir}/usr/share/icons/hicolor/512x512/apps/${_desktop_name}.png"
 }
