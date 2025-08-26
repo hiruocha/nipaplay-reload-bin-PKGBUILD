@@ -1,7 +1,7 @@
 pkgbase = nipaplay-reload-bin
 	pkgdesc = 一个现代化的跨平台视频播放器
 	pkgver = 1.4.39
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/MCDFsteve/NipaPlay-Reload
 	arch = x86_64
 	license = MIT
