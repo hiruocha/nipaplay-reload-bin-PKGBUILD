@@ -3,7 +3,7 @@
 pkgname=nipaplay-reload-bin
 _pkgname=NipaPlay
 _desktop_name=io.github.MCDFsteve.NipaPlay-Reload
-pkgver=1.4.40
+pkgver=1.4.41
 pkgrel=1
 pkgdesc="一个现代化的跨平台视频播放器"
 arch=('x86_64')
@@ -19,7 +19,7 @@ source=(
     "${_desktop_name}.desktop::${url}/raw/main/assets/linux/${_desktop_name}.desktop"
     "${url}/raw/main/LICENSE"
 )
-sha256sums=('02c22cdb022e1303fd468df72bd68169b49b7adb94d6572bdf495fd2238051e9'
+sha256sums=('6fa68937db0cde6c4d9d12bba82adf6104c678ef4e6c1306e7b58fe0c6ca4d77'
             '77e3890478c5c687e9f4531884d34062aa8f0b7aedaf7f562a2c4d3fb776ffda'
             'd032abed9d298e87825e842b2181a9379292acefae775e9bd2840f264eaba16f'
             'fd1d762b5ea1f4cd690235a1b8d6b8efe4ada061f5b26c1fefbd74c156f8184b')
