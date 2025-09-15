@@ -1,6 +1,6 @@
 pkgbase = nipaplay-reload-bin
 	pkgdesc = 一个现代化的跨平台视频播放器
-	pkgver = 1.5.3
+	pkgver = 1.5.4
 	pkgrel = 1
 	url = https://github.com/MCDFsteve/NipaPlay-Reload
 	arch = x86_64
@@ -10,14 +10,14 @@ pkgbase = nipaplay-reload-bin
 	depends = ffmpeg
 	depends = libass
 	depends = libkeybinder3
-	provides = nipaplay=1.5.3
+	provides = nipaplay=1.5.4
 	conflicts = nipaplay
 	options = !debug
-	source = nipaplay-1.5.3-x86_64.tar.gz::https://github.com/MCDFsteve/NipaPlay-Reload/releases/download/v1.5.3/NipaPlay-1.5.3-Linux-amd64.tar.gz
+	source = nipaplay-1.5.4-x86_64.tar.gz::https://github.com/MCDFsteve/NipaPlay-Reload/releases/download/v1.5.4/NipaPlay-1.5.4-Linux-amd64.tar.gz
 	source = io.github.MCDFsteve.NipaPlay-Reload.png::https://github.com/MCDFsteve/NipaPlay-Reload/raw/main/assets/icons/flatpak/hicolor/512x512/apps/io.github.MCDFSteve.NipaPlay-Reload.png
 	source = io.github.MCDFsteve.NipaPlay-Reload.desktop::https://github.com/MCDFsteve/NipaPlay-Reload/raw/main/assets/linux/io.github.MCDFsteve.NipaPlay-Reload.desktop
 	source = https://github.com/MCDFsteve/NipaPlay-Reload/raw/main/LICENSE
-	sha256sums = 769c3a3142fc50c91a316817e70066b582bac4d4c66d02b9568af7b97835fbfa
+	sha256sums = c168a5608992366d4c30fa2de16477c0686ddf48fd452f0f2cf215da2fbf7366
 	sha256sums = 77e3890478c5c687e9f4531884d34062aa8f0b7aedaf7f562a2c4d3fb776ffda
 	sha256sums = d032abed9d298e87825e842b2181a9379292acefae775e9bd2840f264eaba16f
 	sha256sums = fd1d762b5ea1f4cd690235a1b8d6b8efe4ada061f5b26c1fefbd74c156f8184b
