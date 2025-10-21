@@ -1,7 +1,7 @@
 pkgbase = nipaplay-reload-bin
 	pkgdesc = 一个现代化的跨平台视频播放器
 	pkgver = 1.7.2
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/MCDFsteve/NipaPlay-Reload
 	arch = x86_64
 	license = MIT
@@ -10,8 +10,8 @@ pkgbase = nipaplay-reload-bin
 	depends = ffmpeg
 	depends = libass
 	depends = libkeybinder3
-	provides = nipaplay=1.7.2
-	provides = nipaplay-reload=1.7.2
+	provides = nipaplay
+	provides = nipaplay-reload
 	conflicts = nipaplay
 	conflicts = nipaplay-reload
 	options = !debug

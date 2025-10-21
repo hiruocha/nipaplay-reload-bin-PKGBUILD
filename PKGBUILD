@@ -4,13 +4,13 @@ pkgname=nipaplay-reload-bin
 _pkgname=NipaPlay
 _desktop_name=io.github.MCDFsteve.NipaPlay-Reload
 pkgver=1.7.2
-pkgrel=2
+pkgrel=3
 pkgdesc="一个现代化的跨平台视频播放器"
 arch=('x86_64')
 url="https://github.com/MCDFsteve/NipaPlay-Reload"
 license=('MIT')
 depends=('mpv' 'gtk3' 'ffmpeg' 'libass' 'libkeybinder3')
-provides=("${pkgname%-reload-bin}=${pkgver}" "${pkgname%-bin}=${pkgver}")
+provides=("${pkgname%-reload-bin}" "${pkgname%-bin}")
 conflicts=("${pkgname%-reload-bin}" "${pkgname%-bin}")
 options=('!debug')
 source=(
